@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="/CSS/styles.css" />
+    <title>Home</title>
+</head>
+ <header>
+    <nav>
+        <a href="index.html">Home</a>
+        <label>&nbsp;|&nbsp;</label>
+        <a href="addPost.html">Add Post</a>
+    </nav>
+    <nav>
+        <a href="login.html">Log in</a>
+        <a href="signUp.html">Sign up</a>
+    </nav>
+    <div class="dropdown">
+        <img onclick="myfunction()" class="dropbtn" src="/images/profiil.png" alt="Profiili pilt" 
+            width="75" height="75">
+        <div id="myDropdown" class="dropdown-content">
+            <label>John Doe <br></label>
+            <label>johndoe@ut.ee <br> </label>
+            <label> logout <br></label>
+        </div>
+    </div>
+    </header>
+<body>
+    <div class="container-feed-main">
+        <div class="container-feed-left">
+        </div>
+        <div class="container-feed-middle">
+            <div class="post-wrapper">
+
+                <div class="post">
+                    <div class="post-header">
+                        <img src="/images/profiil.png" alt="Profiili pilt" width="40" height="40">
+                        <p class="post-date">Oct 22, 2022</p>
+                    </div>
+                    <div class="post-content">
+                        <img src="/images/skunk.jpg" alt="Its a Skunk or idk who this" width="450" height="350">
+                    </div>
+                    <div class="post-description">
+                        <h2>Party!!</h2>
+                        <p>Hello guys im throwing a sick party in my nest tomorrow, join me!</p>
+                    </div>
+                </div>
+
+                <div class="post">
+                    <div class="post-header">
+                        <img src="/images/profiil.png" alt="Profiili pilt" width="40" height="40">
+                        <p class="post-date">Oct 23, 2022</p>
+                    </div>
+                    <div class="post-content">
+                        <img src="images\dogs.jpg" alt="dogs" width="450" height="350">
+                    </div>
+                    <div class="post-description">
+                        <h2>Auh Auh!</h2>
+                        <p>I got 2 loving puppies today, check them out!</p>
+                    </div>
+                </div>
+
+                <div class="post">
+                    <div class="post-header">
+                        <img src="/images/profiil.png alt="Profiili pilt" width="40" height="40">
+                        <p class="post-date">Oct 24, 2022</p>
+                    </div>
+                    <div class="post-content">
+                        <img src="/images/polarbear.jpg" alt="dogs" width="450" height="350">
+                    </div>
+                    <div class="post-description">
+                        <h2>White polar bear</h2>
+                        <p>They look cute but are deadly! Folks watch out during the winter time!</p>
+                    </div>
+                </div>
+
+                <div class="post">
+                    <div class="post-header">
+                        <img src="/images/profiil.png" alt="Profiili pilt" width="40" height="40">
+                        <p class="post-date">Oct 24, 2022</p>
+                    </div>
+                    <div class="post-content">
+                        <img src="/images/tiger.jpg" alt="dogs" width="450" height="350">
+                    </div>
+                    <div class="post-description">
+                        <h2>That's a big "Meow.."</h2>
+                        <p> Guys where can I adopt one of these? Let me know.</p>
+                    </div>
+                </div>
+
+                <div class="post">
+                    <div class="post-header">
+                        <img src="/images/profiil.png" alt="Profiili pilt" width="40" height="40">
+                        <p class="post-date">Oct 25, 2022</p>
+                    </div>
+                    <div class="post-description">
+                        <h2>Lost me phone in school</h2>
+                        <p>Hello everybody! Has anyone seen my Iphone 14 in school?</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="container-feed-right">
+        </div>
+    </div>
+</body>
+<footer>
+    <div class="footer-container">
+        <div class="footer-wrapper">
+            <p>©Copyright 2023</p>
+            <p>All rights reserved</p>
+            <p>Powered by 2 amazing students</p>
+        </div>
+    </div>
+</footer>
+</html>
+
+<script>
+    function myfunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
+<script type="module" src="index.js"></script>
+<script type="module" src="postHTML.js"></script>
+

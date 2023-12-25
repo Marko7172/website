@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/CSS//styles.css">
+        <title>Sign up page</title>
+    </head>
+    <body id="loginPage" class="body">
+        <header>
+            <nav>
+                <a href="index.html">Home</a>
+            </nav>
+            <nav>
+                <a href="login.html">Log in</a>
+                <a href="signUp.html">Sign up</a>
+            </nav>
+            <div class="dropdown">
+                <img onclick="myfunction()" class="dropbtn" src="/images/profiil.png" alt="Profiili pilt" 
+                    width="75" height="75">
+                <div id="myDropdown" class="dropdown-content">
+                    <label>John Doe <br></label>
+                    <label>johndoe@ut.ee <br> </label>
+                    <label> logout <br></label>
+                </div>
+            </div>
+            </header>
+        <div class="resgisterWrapper">
+            <div class="sign-up-container">
+                <div class="registerLabels">
+                    <label>Email</label>
+                    <label>Password</label>
+                </div>
+            
+                <form class="registerForm">
+                    <input class="registerInputBox" type="Email" id="email" placeholder="Email" name="email" required>
+                    <br>
+                    <input class="registerInputBox" type="Password" id="password" placeholder="Password" name="password" required>
+                    <br>
+                    <input class="registerLoginButton" type="submit" id="submit" value="Sign up" onclick="window.open('index.html', '_self')"/>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
+<footer>
+    <div class="footer-container">
+        <div class="footer-wrapper">
+            <p>©Copyright 2023</p>
+            <p>All rights reserved</p>
+            <p>Powered by 2 amazing students</p>
+        </div>
+    </div>
+</footer>
+<script>
+    function myfunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+</script>

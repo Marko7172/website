@@ -1,0 +1,134 @@
+:root {
+    --lightgreen: #5b9d70;
+    --white: #ffffff;
+    --darkGreen: #17562b;
+    --pink: #e26e91;
+    --grey: #718690;
+    --red: #ed2525;
+    --llgreen: #c4ddc1;
+    --blue: #288ba3;
+}
+
+html {
+    height: 100%;
+    
+    background-color: var(--llgreen);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: unset;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--darkGreen);
+    border-radius: 12px;
+    align-items: center;
+    height: 20%;
+    margin: 10px;
+}
+
+header:first-child {
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav a {
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: var(--red);
+}
+
+.loginContainer {
+    height: wrap;
+    width: max-content;
+    background-color: var(--lightgreen);
+    border-radius: 20px;
+    margin: 0 auto;
+    font-size: xx-large;
+    text-align: center;
+    padding: 20px;
+}
+
+.loginContentBold {
+    font-weight: bold;
+    color: black;
+}
+
+.loginBlue {
+    color: var(--red);
+}
+
+.loginContent {
+    color: black;
+}
+
+.inputBox {
+    resize: none;
+    padding: 0.5rem;
+    margin: 10px;
+    border-radius: 15px;
+    border: none;
+}
+
+.loginButton {
+    margin-bottom: 10px;
+    width: 100%;
+    justify-items: flex-start;
+    align-items: center;
+}
+
+#submit {
+    background-color: var(--pink);
+    color: black;
+    border-radius: 12px;
+    border: unset;
+    padding: 0.5rem;
+    font-size: x-large;
+    width: fit-content;
+    margin: 10px;
+    cursor: pointer;
+
+}
+
+.dropdown {
+    position: relative;
+    margin: 30px;
+    display: inline-block;
+}
+
+.dropdown-content {
+    text-align: center;
+    display: none;
+    position:fixed;
+    margin-left: -109px;
+    background-color: #5b9d70;
+    width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10px;
+    line-height: 30px;
+}
+
+.dropdown-content label{
+    color: black;
+}
+
+.show {display: block;}

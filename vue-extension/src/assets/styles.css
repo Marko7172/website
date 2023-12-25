@@ -1,0 +1,383 @@
+:root {
+    --lightgreen: #5b9d70;
+    --white: #ffffff;
+    --darkGreen: #17562b;
+    --pink: #e26e91;
+    --grey: #718690;
+    --red: #ed2525;
+    --llgreen: #c4ddc1;
+    --blue: #288ba3;
+}
+html {
+    height: 100%;
+    background-color: var(--llgreen);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: unset;
+}
+
+header {
+    display: flex;
+    background-color: var(--darkGreen);
+    border-radius: 20px;
+    align-items: center;
+    height: 120px;
+    margin: 10px 10px 10px 10px;
+}
+
+header > *{
+    flex: 1 1 0;
+}
+
+header:first-child {
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+/* Target second child*/
+header nav:nth-child(2) a{
+    margin: 0 10px 0 10px;
+    font-size: 20px;
+    color: var(--pink);
+    padding: 10px;
+
+}
+
+header nav:nth-child(2) a:hover{
+    background-color: white;
+    border-radius: 10px;
+}
+
+header nav:nth-child(2){
+    justify-content: center;
+}
+
+.dropbtn{
+    float: right;
+}
+
+nav {
+    display: flex;
+}
+
+nav label{
+    font-size: 40px;
+}
+
+nav a {
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav a:hover {
+    background-color: var(--red);
+    border-radius: 10px;
+}
+
+
+.main-menu{
+    padding: 10px;
+    margin: auto;
+}
+
+/* First descendant selector here*/
+.main-menu ul{
+    padding-inline-start: 5px;
+}
+
+.main-menu ul li{
+    display: inline;
+    margin: 0px 10px 0px 10px;
+    font-size: 25px;
+}
+
+/* First child selector here*/
+.main-menu > ul > li > a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+.main-menu ul li a:hover{
+    background-color: azure;
+}
+
+/* Adjacent sibling selector here*/
+.main-menu li:first-of-type + li{
+    font-weight: 900;
+}
+
+.container-feed-main{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-feed-left{
+    background-color: var(--darkGreen);
+    width: 300px;
+    border-radius: 20px;
+    margin-left: 10px;
+}
+
+.container-feed-middle{
+    width: 600px;
+    border-radius: 20px;
+    margin: 0px 20px 0px 20px;
+}
+
+.container-feed-right{
+    background-color: var(--darkGreen);
+    width: 300px;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.footer-container {
+    margin-top: 10px;
+    border-radius: 20px;
+    background-color: var(--darkGreen);
+    height: 100px;
+}
+
+.footer-container {
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.footer-container .footer-wrapper {
+    padding: 30px;
+}
+
+footer {
+    width: 100%;
+
+    /* Always display footer to the bottom of the page */
+    margin-top: auto;
+}
+
+.footer-wrapper p {
+    margin: 0;
+}
+
+#footer-message {
+    margin: 0;
+}
+
+.post-header {
+    padding: 15px;
+    display: flex;
+}
+
+.post-header p {
+    font-weight: 600;
+    font-size: 25px;
+    margin: 0;
+    text-align: center;
+    margin: auto 0 auto auto;
+}
+
+.post-content{
+    width: 100%;
+    text-align: center;
+}
+
+.post-description{
+    padding: 40px;
+}
+
+.post-description p{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.post-wrapper{
+    display: grid;
+    row-gap: 20px;
+}
+
+.post{
+    background: var(--lightgreen);
+    border-radius: 20px;
+}
+
+.add-post-container{
+    padding: 0px;
+}
+
+.add-post-wrapper{
+    height: 580px;
+    width: 600px;
+    margin: 0 auto;
+    border-radius: 20px;
+    background: var(--lightgreen );
+}
+
+#add-post-body{
+    display: block;
+    padding: 30px 100px;
+}
+
+#add-post-body h2{
+    width: 60px;
+    margin: 0px 10px 0px 0px;
+}
+
+/* Pseudo-element here */
+#add-post-body h2::first-letter{
+    text-transform: uppercase;
+}
+
+#post-text-input-form{
+    resize: none;
+    font-size: 15px;
+}
+
+#add-post-select-file{
+    display: flex;
+    padding: 0px 100px;
+    gap: 130px;
+    align-items: center;
+}
+
+#add-post-select-file h2{
+    width: 60px;
+}
+
+.choose-file-button{
+    height: 50px;
+    font-size: 25px;
+    width: 300px;
+    background: var(--blue);
+    color: black;
+    border: unset;
+    border-radius: 12px;
+}
+
+#add-post-submit{
+    text-align: center;
+    padding: 70px;
+}
+
+.submit-post-button{
+    height: 40px;
+    font-size: 23px;
+    width: 200px;
+    background: var(--pink);
+    color: black;
+    border: unset;
+    border-radius: 12px;
+}
+
+/* General sibling selector here */
+.post-description h2 ~ p {
+    text-decoration: solid;
+    color: rgb(45, 45, 45);;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.container {
+    height: wrap;
+    width: max-content;
+    background-color: var(--lightgreen);
+    border-radius: 12px;
+    margin: 10px;
+    font-size: xx-large;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20%;
+}
+
+.dropdown {
+    position: relative;
+    margin: 30px;
+    display: inline-block;
+}
+
+.dropdown-content {
+    text-align: center;
+    display: none;
+    position:fixed;
+    background-color: #5b9d70;
+    width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10px;
+    line-height: 30px;
+    right: 40px;
+    top: 110px;
+}
+
+.dropdown-content label{
+    color: black;
+}
+
+.show {display: block;}
+
+
+/* Sign up page css */
+
+.sign-up-container{
+    display: flex;
+    width: 250px;
+    height: 150px;
+    padding: 40px 60px 40px 30px;
+    background-color: var(--lightgreen);
+    border-radius: 20px;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.registerForm{
+    height: 140px;
+}
+
+.resgisterWrapper{
+    margin: 50px auto 0px auto;;
+}
+
+.registerInputBox{
+    margin: 5px;
+    padding: 10px;
+    border-radius: 15px;
+    border-width: 0px;
+}
+
+.registerLabels{
+    display: grid;
+    height: 80px;
+    text-align: end;
+    margin-right: 10px;
+    margin-bottom: 30px;
+}
+
+
+.registerLabels label:last-child{
+    margin: 10px 0 0 0;
+}
+
+.registerForm input:last-child{
+    background-color: var(--pink);
+    margin: 10px 40px 10px 5px;
+    padding: 10px 20px 10px 20px;
+    border: unset;
+    border-radius: 10px;
+}
+
+
+

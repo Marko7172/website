@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/CSS/styles.css" />
+    <title>Add Post</title>
+</head>
+<header>
+    <nav>
+        <a href="index.html">Home</a>
+    </nav>
+    <nav>
+        <a href="login.html">Log in</a>
+        <a href="signUp.html">Sign up</a>
+    </nav>
+    <div class="dropdown">
+        <img onclick="myfunction()" class="dropbtn" src="/images/profiil.png" alt="Profiili pilt" 
+            width="75" height="75">
+        <div id="myDropdown" class="dropdown-content">
+            <label>John Doe <br></label>
+            <label>johndoe@ut.ee <br> </label>
+            <label> logout <br></label>
+        </div>
+    </div>
+</header>
+<body>
+    <div class="add-post-container">
+        <div class="add-post-wrapper">
+            <div class="add-post-contents">
+                <div id="add-post-body">
+                    <h2>post Body</h2>
+                    <textarea id="post-text-input-form" name="text form" rows="15" cols="45">Textarea</textarea>
+                </div>
+                <div id="add-post-select-file">
+                    <h2>Select File</h2>
+                    <button class="choose-file-button" type="button">Choose File</button>
+                </div>
+                <div id="add-post-submit">
+                    <button class="submit-post-button" type="button" onclick="window.location.href='index.html';">Create Post</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<footer>
+    <div class="footer-container">
+        <div class="footer-wrapper">
+            <p>©Copyright 2023</p>
+            <p>All rights reserved</p>
+            <p>Powered by 2 amazing students</p>
+        </div>
+    </div>
+</footer>
+</html>
+<script>
+    function myfunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+
+</script>
